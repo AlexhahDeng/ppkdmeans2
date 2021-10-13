@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/mnt/c/Ubu20/ppkdmeans2/build",
+  "command": "/bin/clang++-9  -DHELIB_BOOT_THREADS -DHELIB_THREADS -I/mnt/c/Ubu20/ppkdmeans2 -isystem /usr/local/helib_pack/include  -g   -std=c++17 -o CMakeFiles/ppkdmeans2.dir/ppkdmeans2.cpp.o -c /mnt/c/Ubu20/ppkdmeans2/ppkdmeans2.cpp",
+  "file": "/mnt/c/Ubu20/ppkdmeans2/ppkdmeans2.cpp"
+},
+{
+  "directory": "/mnt/c/Ubu20/ppkdmeans2/build",
+  "command": "/bin/clang++-9  -DHELIB_BOOT_THREADS -DHELIB_THREADS -I/mnt/c/Ubu20/ppkdmeans2 -isystem /usr/local/helib_pack/include  -g   -std=c++17 -o CMakeFiles/ppkdmeans2.dir/comparator.cpp.o -c /mnt/c/Ubu20/ppkdmeans2/comparator.cpp",
+  "file": "/mnt/c/Ubu20/ppkdmeans2/comparator.cpp"
+},
+{
+  "directory": "/mnt/c/Ubu20/ppkdmeans2/build",
+  "command": "/bin/clang++-9  -DHELIB_BOOT_THREADS -DHELIB_THREADS -I/mnt/c/Ubu20/ppkdmeans2 -isystem /usr/local/helib_pack/include  -g   -std=c++17 -o CMakeFiles/ppkdmeans2.dir/cloud_two.cpp.o -c /mnt/c/Ubu20/ppkdmeans2/cloud_two.cpp",
+  "file": "/mnt/c/Ubu20/ppkdmeans2/cloud_two.cpp"
+},
+{
+  "directory": "/mnt/c/Ubu20/ppkdmeans2/build",
+  "command": "/bin/clang++-9  -DHELIB_BOOT_THREADS -DHELIB_THREADS -I/mnt/c/Ubu20/ppkdmeans2 -isystem /usr/local/helib_pack/include  -g   -std=c++17 -o CMakeFiles/ppkdmeans2.dir/cloud_one.cpp.o -c /mnt/c/Ubu20/ppkdmeans2/cloud_one.cpp",
+  "file": "/mnt/c/Ubu20/ppkdmeans2/cloud_one.cpp"
+},
+{
+  "directory": "/mnt/c/Ubu20/ppkdmeans2/build",
+  "command": "/bin/clang++-9  -DHELIB_BOOT_THREADS -DHELIB_THREADS -I/mnt/c/Ubu20/ppkdmeans2 -isystem /usr/local/helib_pack/include  -g   -std=c++17 -o CMakeFiles/ppkdmeans2.dir/tools.cpp.o -c /mnt/c/Ubu20/ppkdmeans2/tools.cpp",
+  "file": "/mnt/c/Ubu20/ppkdmeans2/tools.cpp"
+}
+]

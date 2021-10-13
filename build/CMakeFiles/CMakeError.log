@@ -1,0 +1,58 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c874d/fast && /usr/bin/make -f CMakeFiles/cmTC_c874d.dir/build.make CMakeFiles/cmTC_c874d.dir/build
+make[1]: Entering directory '/mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c874d.dir/src.cxx.o
+/bin/clang++-9    -DCMAKE_HAVE_LIBC_PTHREAD   -std=c++17 -o CMakeFiles/cmTC_c874d.dir/src.cxx.o -c /mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_c874d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c874d.dir/link.txt --verbose=1
+/bin/clang++-9   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_c874d.dir/src.cxx.o  -o cmTC_c874d 
+/bin/ld: CMakeFiles/cmTC_c874d.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x35): undefined reference to `pthread_create'
+/bin/ld: src.cxx:(.text+0x41): undefined reference to `pthread_detach'
+/bin/ld: src.cxx:(.text+0x53): undefined reference to `pthread_join'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_c874d.dir/build.make:87: cmTC_c874d] Error 1
+make[1]: Leaving directory '/mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c874d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dc05b/fast && /usr/bin/make -f CMakeFiles/cmTC_dc05b.dir/build.make CMakeFiles/cmTC_dc05b.dir/build
+make[1]: Entering directory '/mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dc05b.dir/CheckFunctionExists.cxx.o
+/bin/clang++-9    -DCHECK_FUNCTION_EXISTS=pthread_create   -std=c++17 -o CMakeFiles/cmTC_dc05b.dir/CheckFunctionExists.cxx.o -c /mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_dc05b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc05b.dir/link.txt --verbose=1
+/bin/clang++-9   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_dc05b.dir/CheckFunctionExists.cxx.o  -o cmTC_dc05b  -lpthreads 
+/bin/ld: cannot find -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [CMakeFiles/cmTC_dc05b.dir/build.make:87: cmTC_dc05b] Error 1
+make[1]: Leaving directory '/mnt/c/Ubu20/ppkdmeans2/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_dc05b/fast] Error 2
+
+
+
